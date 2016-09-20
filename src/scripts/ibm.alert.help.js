@@ -56,7 +56,7 @@ module.exports = (robot) => {
 
 	function help(res) {
 		robot.logger.debug(`${TAG}: ${ALERT_NOTIFICATION_ID} res.message.text=${res.message.text}.`);
-		robot.logger.info(`${TAG}: Listing ibmalert help...`);
+		robot.logger.info(`${TAG}: Listing ibm alert help...`);
 
 		let help = `${robot.name} ibm alert change cpu|memory|disk threshold to x% - ` + i18n.__('help.ibm.alert.change') + '\n';
 		help += `${robot.name} ibm alert list|show - ` + i18n.__('help.ibm.alert.list') + '\n';
