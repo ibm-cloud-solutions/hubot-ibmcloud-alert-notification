@@ -1,0 +1,32 @@
+{
+	"ibm.alert.cpu": "The application %s has exceeded its set CPU threshold with a value of %s.",
+	"ibm.alert.memory": "The application %s has exceeded its set memory threshold with a value of %s.",
+	"ibm.alert.disk": "The application %s has exceeded its set disk threshold with a value of %s.",
+	"ibm.alert.crash": "The application %s has crashed.",
+
+	"ibm.alert.disabled": "%s IBM Alert Notifications are turned off for space '%s'.",
+	"ibm.alert.disabled.no.alerts": "IBM Alert Notification are not currently enabled for space '%s'.",
+	"ibm.alert.enabled": "OK, I've enabled %s alerts for space '%s'.",
+	"ibm.alert.list.enabled": "IBM Alert Notifications have been enabled in space '%s' -",
+	"ibm.alert.list.off": "IBM Alert Notifications are currently turned off.",
+	"ibm.alert.config.enabled": "OK, the notification trigger for %s is now %s%s in space %s.",
+	"ibm.alert.config.invalid": "%s is not a valid threshold.  Please specify a threshold between between 1 and 100%s.",
+	"ibm.alert.config.please.enable": "Please enable '%s' alerts before setting a threshold.",
+	"ibm.alert.enable.and.set.enabled": "OK, I'll trigger an IBM Alert Notification when %s exceeds %s%s for apps in space %s.",
+	"ibm.alert.enable.and.set.invalid": "%s is not a valid threshold.  Please specify a threshold between between 1 and 100%s.",
+	"ibm.alert.enable.app.events": "OK, I'll trigger an IBM Alert Notification when application crashes happen in space %s.",
+
+	"ibm.alert.alerts.must.be.enabled": "%s alerts must be enabled for space %s before IBM Alert Notifications can be triggered. See %s alert help for more details.",
+	"ibm.alert.alerts.must.be.enabled.with.threshold": "%s alerts must be enabled for space %s with a threshold lower than %s before IBM Alert Notifications can be triggered. See %s alert help for more details.",
+
+	"help.ibm.alert.change": "Sets IBM Alert Notification threshold trigger for specified resource.",
+	"help.ibm.alert.list": "Show status of enabled IBM Alert Notification triggers.",
+	"help.ibm.alert.set.app.resource": "Enable IBM Alert Notifications for a resource with a set threshold.",
+	"help.ibm.alert.off": "Turns off IBM Alert Notifications for specified resource.",
+	"help.ibm.alert.on": "Turns on IBM Alert Notifications for specified resource.",
+
+	"cognitive.parse.problem.timeframe": "I'm having problems understanding the timeframe. To show application problems use *app show me problems [today|this week]*.",
+	"cognitive.parse.problem.type": "I'm having problems understanding the provided alert type. Should be one of the following: *cpu*, *memory*, *disk*, *event*, or *all*.",
+	"cognitive.parse.problem.thresholdType": "I'm having problems understanding the provided alert type. Should be one of the following: *cpu*, *memory*, or *disk*.",
+	"cognitive.parse.problem.threshold": "I'm having problems understanding the provided threshold. Should be a percentage input as a number."
+}

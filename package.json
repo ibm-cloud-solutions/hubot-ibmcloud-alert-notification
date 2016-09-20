@@ -1,0 +1,69 @@
+{
+  "name": "hubot-ibmcloud-alert-notification",
+  "version": "0.0.1",
+  "description": "hubot script for alerting user on IBM Cloud application events",
+  "main": "index.js",
+  "repository": {
+    "url": "https://github.com/ibm-cloud-solutions/hubot-ibmcloud-alert-notification",
+    "type": "git"
+  },
+  "scripts": {
+    "start": "source config/env && hubot -a shell",
+    "slack": "source config/env && hubot -a slack",
+    "facebook": "source config/env && hubot -a fb",
+    "lint": "eslint src/**/*.js test/*.js index.js",
+    "postinstall": "initDb src/nlc/NLC.json",
+    "test": ". test/.env && mocha test",
+    "coverage": ". test/.env && istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
+    "coverage-local": ". test/.env && istanbul cover -x '**/tools/**' --include-all-sources --report lcov --report cobertura --report text --dir ./gh-pages/coverage _mocha -- test"
+  },
+  "keywords": [
+    "hubot",
+    "hubot-scripts",
+    "bluemix",
+    "cloud",
+    "slack",
+    "ibm",
+    "ibm cloud"
+  ],
+  "author": "ibm-cloud-solutions",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "coffee-script": "^1.10.0",
+    "coveralls": "^2.11.12",
+    "eslint": "^2.9.0",
+    "eslint-config-strongloop": "^2.0.1",
+    "hubot": "^2.19.0",
+    "hubot-fb": "^3.0.0",
+    "hubot-help": "^0.2.0",
+    "hubot-ibmcloud-auth": ">=0.0.8",
+    "hubot-ibmcloud-formatter": ">=0.0.10",
+    "hubot-ibmcloud-nlc": ">=0.0.21",
+    "hubot-shell": "^1.0.2",
+    "hubot-slack": "^4.0.2",
+    "hubot-test-helper": "^1.4.4",
+    "istanbul": "0.4.0",
+    "mocha": "^2.4.5",
+    "nock": "^8.0.0"
+  },
+  "peerDependencies": {
+    "hubot": "^2.19.0",
+    "hubot-cf-convenience": ">=0.0.13",
+    "hubot-ibmcloud-activity-emitter": ">=0.0.3",
+    "hubot-ibmcloud-alerts": ">=0.0.20",
+    "hubot-ibmcloud-cognitive-lib": ">=0.0.40",
+    "hubot-ibmcloud-utils": ">=0.0.14",
+    "i18n-2": "^0.6.3",
+    "request": "^2.74.0"
+  },
+  "engines": {
+    "node": ">= 4.2.0"
+  },
+  "files": [
+    "src",
+    "index.js"
+  ],
+  "dependencies": {
+  }
+}

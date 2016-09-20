@@ -1,0 +1,118 @@
+{   "name": "IBMcloudIBMAlertNotification",
+	"version": "0.0.1",
+	"classes": [
+		{
+			"class": "ibmcloud.alert.notification.help",
+			"description": "Help with IBM Alert Notifications for monitored resources",
+			"emittarget": "ibmcloud.alert.notification.help",
+			"texts": [
+				"Help with IBM Alert notifications for monitored resources.",
+				"Can you help me with app incident Notifications?",
+				"How can I be notified about application crashes.",
+				"help ibm alert notifications"
+			]
+		},
+		{
+			"class": "ibmcloud.alert.notification.enable",
+			"description": "Enable IBM Alert Notificaton triggers for monitored resources",
+			"emittarget": "ibmcloud.alert.notification.enable",
+			"texts": [
+				"Alert for bad app CPU",
+				"Notfify of memory issues",
+				"trigger an IBM Alert if disk usage exceeds"
+			],
+			"parameters" : [
+				{
+					"name": "type",
+					"type": "keyword",
+					"prompt": "OK. What alert type do you want to be notified for *cpu*, *memory*, *disk*, *crash*, or *all*?"
+				}
+			]
+		},
+		{
+			"class": "ibmcloud.alert.notification.disable",
+			"description": "Disable IBM Alert Notifications for monitored resources",
+			"emittarget": "ibmcloud.alert.notification.disable",
+			"texts": [
+				"Stop triggering IBM Alert Notifications",
+				"Disable resource monitored IBM Alerts",
+				"stop notifications for app crashes"
+			],
+			"parameters" : [
+				{
+					"name": "type",
+					"type": "keyword",
+					"prompt": "OK. What alert type do you want to disabled: *cpu*, *memory*, *disk*, *crash*, or *all*?"
+				}
+			]
+		},
+		{
+			"class": "ibmcloud.alert.notification.list",
+			"description": "Show enabled triggers for IBM Alert Notifications",
+			"emittarget": "ibmcloud.alert.notification.list",
+			"texts": [
+				"Show my active IBM Alert Notifications",
+				"Display the existing IBM Alert triggers",
+				"List the current resource alert notifications"
+			]
+		},
+		{
+			"class": "ibmcloud.alert.notification.set.threshold",
+			"description": "Set thresholds to create IBM Alert Notifications for monitored resources",
+			"emittarget": "ibmcloud.alert.notification.set.threshold",
+			"texts": [
+				"Set IBM Alert threshold to",
+				"Alter notification threshold",
+				"Change notification trigger threshold"
+			],
+			"parameters" : [
+				{
+					"name": "thresholdType",
+					"type": "keyword",
+					"prompt": "OK. What threshold type do you want to set: *cpu*, *memory*, or *disk*?"
+				},
+				{
+					"name": "threshold",
+					"type": "number",
+					"prompt": "OK. What do you want to set the threshold to as a percentage? Just the number please."
+				}
+			]
+		},
+		{
+			"class": "ibmcloud.alert.notification.enable.and.set",
+			"description": "Enable and set IBM Alert Notification thresholds for monitored resources",
+			"emittarget": "ibmcloud.alert.notification.enable.and.set",
+			"texts": [
+				"Monitor my app with threshold alerts of",
+				"Enable threshold alerts at",
+				"Start alert monitoring with threshold"
+			],
+			"parameters" : [
+				{
+					"name": "thresholdType",
+					"type": "keyword",
+					"prompt": "OK. What threshold type do you want to set: *cpu*, *memory*, or *disk*?"
+				},
+				{
+					"name": "threshold",
+					"type": "number",
+					"prompt": "OK. What do you want to set the threshold to as a percentage? Just the number please."
+				}
+			]
+		}
+	],
+	"parameter.values" : [
+		{
+			"name": "timeframe",
+			"values": ["today", "this week"]
+		},
+		{
+			"name": "type",
+			"values": ["cpu", "memory", "disk", "event", "all"]
+		},
+		{
+			"name": "thresholdType",
+			"values": ["cpu", "memory", "disk"]
+		}
+	]
+}
