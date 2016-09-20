@@ -1,6 +1,6 @@
 {
   "name": "hubot-ibmcloud-alert-notification",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "hubot script for alerting user on IBM Cloud application events",
   "main": "index.js",
   "repository": {
@@ -66,6 +66,5 @@
     "src",
     "index.js"
   ],
-  "dependencies": {
-  }
+  "dependencies": {}
 }
